@@ -17,23 +17,17 @@ var timeBlock = [
   { id: "#hour-16", hour: 16 },
   { id: "#hour-17", hour: 17 },
 ];
-
+// changes class to class that coordinates with curent time
 $.each(timeBlock, function (key, value) {
   var presentHour = value.id;
 
   if (value.hour < currentHour) {
-    $(presentHour).removeClass("future");
-    $(presentHour).removeClass("present");
     $(presentHour).addClass("past");
-
+    
   } else if (value.hour == currentHour) {
-    $(presentHour).removeClass("future");
-    $(presentHour).removeClass("past");
     $(presentHour).addClass("present");
 
   } else {
-    $(presentHour).removeClass("present");
-    $(presentHour).removeClass("past");
     $(presentHour).addClass("future");
   }
 });
@@ -53,6 +47,7 @@ $(function () {
     });
   }
 });
+// save input
 $(".saveBtn").click(function () {
   var saveBtn = $(this).parent().attr("id");
   var saveBtnID = `#${saveBtn}`;
