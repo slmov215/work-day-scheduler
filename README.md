@@ -10,7 +10,7 @@ N/A
 
 ## Feature / Usage
 
-![Screenshot of the Webpage](./assets/images/agenda-screenshot-with-modal.png)
+![Screenshot of the Webpage](./assets/images/work-day.gif)
 
 * The application will display the time blocks from 9 AM - 5 PM.
 * The gray blocks indicates the time are in the past.

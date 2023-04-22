@@ -1,5 +1,6 @@
 var currentDate = dayjs().format("dddd, MMMM D, YYYY");
 var currentHour = dayjs().format("HH");
+var currentHour = 13 ;
 var saveBtnEl = $(".saveBtn");
 $("#currentDay").text(`${currentDate}`);
 var myModal = new bootstrap.Modal('#message-modal');
@@ -17,7 +18,7 @@ var timeBlock = [
   { id: "#hour-16", hour: 16 },
   { id: "#hour-17", hour: 17 },
 ];
-// changes class to class that coordinates with curent time
+// changes class to the class that coordinates with curent time
 $.each(timeBlock, function (key, value) {
   var presentHour = value.id;
 
@@ -47,7 +48,7 @@ $(function () {
     });
   }
 });
-// save input
+// save input on click event
 $(".saveBtn").click(function () {
   var saveBtn = $(this).parent().attr("id");
   var saveBtnID = `#${saveBtn}`;
